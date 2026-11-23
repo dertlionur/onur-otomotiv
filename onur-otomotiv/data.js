@@ -1,0 +1,27 @@
+/* Eğitim amaçlı Onur Otomotiv demo ilanları. Gerçek araç, fiyat veya stok bilgisi değildir. */
+const gallery=(base)=>[
+  {view:'front',label:'Ön Görünüm'},
+  {view:'side',label:'Yan Görünüm'},
+  {view:'rear',label:'Arka Görünüm'},
+  {view:'cockpit',label:'Ön Konsol'},
+  {view:'rear-seat',label:'Arka Koltuk'},
+  {view:'trunk',label:'Bagaj'}
+].map(item=>({
+  ...item,
+  large:`assets/cars/${base}-${item.view}-1536.webp`,
+  small:`assets/cars/${base}-${item.view}-640.webp`
+}));
+window.CARS = [
+  {id:'fiat-egea-2021',brand:'Fiat',model:'Egea',trim:'1.4 Fire Easy',year:2021,km:84200,fuel:'Benzin',gear:'Manuel',body:'Sedan',price:739000,color:'Beyaz',engine:'1.4 / 95 HP',photo:'fiat-egea-white',photoBase:'fiat-egea-white',tag:'Ekonomik',description:'Bakımlı ve günlük kullanıma uygun örnek Fiat Egea ilanı. Geniş bagaj hacmi ve ekonomik bakım yapısıyla aile kullanımı için ideal segmenti temsil eder.',gallery:gallery('fiat-egea-white')},
+  {id:'renault-clio-2022',brand:'Renault',model:'Clio',trim:'1.0 TCe Touch',year:2022,km:48600,fuel:'Benzin',gear:'Otomatik',body:'Hatchback',price:919000,color:'Mavi',engine:'1.0 / 90 HP',photo:'renault-clio-blue',photoBase:'renault-clio-blue',tag:'Düşük Km',description:'Şehir içi kullanım için pratik boyutlara sahip, modern tasarımlı örnek Renault Clio ilanı. Konfor, ekonomi ve güncel donanımı bir arada sunan bir hatchback temsilidir.',gallery:gallery('renault-clio-blue')},
+  {id:'toyota-corolla-2020',brand:'Toyota',model:'Corolla',trim:'1.6 Vision',year:2020,km:91800,fuel:'Benzin',gear:'Otomatik',body:'Sedan',price:1049000,color:'Beyaz',engine:'1.6 / 132 HP',photo:'toyota-corolla-white',photoBase:'toyota-corolla-white',tag:'Öne Çıkan',description:'Konforlu sürüşü ve dayanıklılığıyla öne çıkan örnek Toyota Corolla ilanı. Aile kullanımı ve uzun yol rahatlığı arayan müşteriler için vitrinde değerlendirilen sedan segmentini temsil eder.',gallery:gallery('toyota-corolla-white')},
+  {id:'dacia-duster-2021',brand:'Dacia',model:'Duster',trim:'1.5 Blue dCi Comfort',year:2021,km:77400,fuel:'Dizel',gear:'Manuel',body:'SUV',price:1125000,color:'Gri',engine:'1.5 / 115 HP',photo:'dacia-duster-silver',photoBase:'dacia-duster-silver',tag:'SUV',description:'Yüksek sürüş pozisyonu ve geniş yaşam alanı sunan örnek Dacia Duster ilanı. Hem şehir hem hafif arazi kullanımı isteyen müşterilere hitap eden SUV grubunu temsil eder.',gallery:gallery('dacia-duster-silver')},
+  {id:'volkswagen-passat-2019',brand:'Volkswagen',model:'Passat',trim:'1.5 TSI Impression',year:2019,km:109300,fuel:'Benzin',gear:'Otomatik',body:'Sedan',price:1285000,color:'Koyu Gri',engine:'1.5 / 150 HP',photo:'volkswagen-passat-gray',photoBase:'volkswagen-passat-gray',tag:'Konfor',description:'Geniş iç hacmi ve üst sınıf sürüş hissiyle öne çıkan örnek Volkswagen Passat ilanı. Kurumsal ve aile kullanımı için güçlü bir sedan alternatifini temsil eder.',gallery:gallery('volkswagen-passat-gray')},
+  {id:'opel-astra-2019',brand:'Opel',model:'Astra',trim:'1.4 Enjoy',year:2019,km:96750,fuel:'Benzin',gear:'Manuel',body:'Sedan',price:879000,color:'Metalik Gri',engine:'1.4 / 140 HP',photo:'opel-astra-gray',photoBase:'opel-astra-gray',tag:'Fırsat',description:'Kullanışlı sedan yapısı ve dengeli sürüş karakteriyle öne çıkan örnek Opel Astra ilanı. Günlük kullanım için tercih edilen orta sınıf seçeneklerden birini temsil eder.',gallery:gallery('opel-astra-gray')},
+  {id:'ford-focus-2020',brand:'Ford',model:'Focus',trim:'1.5 Ti-VCT Trend X',year:2020,km:88700,fuel:'Benzin',gear:'Otomatik',body:'Sedan',price:989000,color:'Mavi',engine:'1.5 / 123 HP',photo:'ford-focus-blue',photoBase:'ford-focus-blue',tag:'Yeni İlan',description:'Dinamik sürüşü ve modern kokpit tasarımıyla öne çıkan örnek Ford Focus ilanı. Hem bireysel hem aile kullanımına hitap eden dengeli sedan segmentini temsil eder.',gallery:gallery('ford-focus-blue')},
+  {id:'hyundai-i20-2021',brand:'Hyundai',model:'i20',trim:'1.4 MPI Style',year:2021,km:53200,fuel:'Benzin',gear:'Manuel',body:'Hatchback',price:835000,color:'Beyaz',engine:'1.4 / 100 HP',photo:'hyundai-i20-white',photoBase:'hyundai-i20-white',tag:'Popüler',description:'Kompakt yapısı, şık tasarımı ve düşük kullanım maliyetiyle öne çıkan örnek Hyundai i20 ilanı. Şehir içi kullanıcıların en çok baktığı hatchback seçeneklerden birini temsil eder.',gallery:gallery('hyundai-i20-white')},
+  {id:'honda-civic-2018',brand:'Honda',model:'Civic',trim:'1.6 i-VTEC Eco Elegance',year:2018,km:121400,fuel:'Benzin + LPG',gear:'Otomatik',body:'Sedan',price:1165000,color:'Kırmızı',engine:'1.6 / 125 HP',photo:'honda-civic-red',photoBase:'honda-civic-red',tag:'Prestij',description:'Şık dış tasarımı ve geniş iç mekânıyla dikkat çeken örnek Honda Civic ilanı. LPG uyumlu sedan arayan müşterilerin sık değerlendirdiği modellerden birini temsil eder.',gallery:gallery('honda-civic-red')},
+  {id:'renault-megane-2020',brand:'Renault',model:'Megane',trim:'1.3 TCe Joy',year:2020,km:79800,fuel:'Benzin',gear:'Otomatik',body:'Sedan',price:1025000,color:'Gümüş',engine:'1.3 / 140 HP',photo:'renault-megane-silver',photoBase:'renault-megane-silver',tag:'Şık Tasarım',description:'Modern çizgileri ve ferah iç mekânıyla öne çıkan örnek Renault Megane sedan ilanı. Günlük kullanıma uygun, dengeli donanım ve görünüm sunan modeller arasında yer alır.',gallery:gallery('renault-megane-silver')}
+];
+window.formatPrice = n => new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:0}).format(n);
+window.formatKm = n => new Intl.NumberFormat('tr-TR').format(n)+' km';
