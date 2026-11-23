@@ -1,4 +1,4 @@
-/* Accessible Onur Asistan widget; isolated from existing page layout. */
+/* Accessible Onur Otomotiv Asistanı widget; isolated from existing page layout. */
 .chatbot{position:fixed;right:24px;bottom:24px;z-index:1000;font-family:'DM Sans',system-ui,sans-serif;color:#14243d}
 .chat-launch{width:64px;height:64px;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;color:#fff;background:linear-gradient(135deg,#0c2346,#285994);box-shadow:0 15px 33px rgba(12,35,70,.32);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
 .chat-launch:hover,.chat-launch:focus-visible{transform:scale(1.06);box-shadow:0 17px 36px rgba(12,35,70,.42)}
