@@ -1,4 +1,4 @@
-/* Onur Otomotiv Asistanı: local, rule-based, no external API and no personal data transmission. */
+/* Onur Asistan: local, rule-based, no external API and no personal data transmission. */
 (() => {
   'use strict';
   const root = document.querySelector('#onur-chatbot');
@@ -40,7 +40,7 @@
     else div.innerHTML = html;
     messages.append(div);
     messages.scrollTop = messages.scrollHeight;
-    status.textContent = role === 'bot' ? 'Onur Otomotiv Asistanı yanıt verdi.' : 'Mesaj gönderildi.';
+    status.textContent = role === 'bot' ? 'Onur Asistan yanıt verdi.' : 'Mesaj gönderildi.';
     return div;
   }
   function text(html) { add('bot', `<p>${html}</p>`); }
@@ -118,7 +118,7 @@
     if (has(s,['merhaba','selam','hey','iyi gunler','iyi aksamlar','gunaydin','naber'])) {
       text('Merhaba! 👋 Onur Otomotiv sanal danışmanıyım. Bana bütçenizi, tercih ettiğiniz markayı, vites veya yakıt türünü yazabilirsiniz. Örnek: <strong>“1 milyon TL altında otomatik araç göster”</strong>.');
     } else if (has(s,['kimsin','yapay zeka','chatbot','bot musun','nasil calisiyorsun'])) {
-      text('Ben Onur Otomotiv Asistanı. Bu sitedeki örnek ilanları ve tanımlı sık sorulan soruları inceleyen, <strong>internete veya bir yapay zekâ API’sine bağlanmadan</strong> çalışan kural tabanlı bir yardımcıyım. Cevaplayamadığım sorularda iletişim sayfasına yönlendiririm.');
+      text('Ben Onur Asistan. Bu sitedeki örnek ilanları ve tanımlı sık sorulan soruları inceleyen, <strong>internete veya bir yapay zekâ API’sine bağlanmadan</strong> çalışan kural tabanlı bir yardımcıyım. Cevaplayamadığım sorularda iletişim sayfasına yönlendiririm.');
     } else if (has(s,['takas','aracimi sat','arac satmak','araba satmak','ikinci el aracimi'])) {
       text('Araç takası veya aracınızı satma talebinizi değerlendirecek bir işletme yetkilisi henüz bu demo sitede tanımlanmadı. Gerçek kullanımda marka, model, yıl, kilometre, hasar durumu ve araç fotoğrafları alınarak ön değerlendirme yapılabilir. <a href="iletisim.html">İletişim formuna geçin →</a>');
     } else if (has(s,['ekspertiz','hasar','boya','degisen','tramer','kaza','sasi','airbag','kontrol'])) {
@@ -165,6 +165,6 @@
   close.addEventListener('click', () => toggle(false));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) toggle(false); });
   form.addEventListener('submit', e => { e.preventDefault(); respond(input.value); });
-  add('bot', '<p>Merhaba! 👋 Ben <strong>Onur Otomotiv Asistanı</strong>. Bütçenize göre araç arayabilir, vites/yakıt tercihinizi sorabilir veya satış süreciyle ilgili sık sorulan sorulara yanıt alabilirsiniz.</p><small class="chat-disclaimer">Kural tabanlı demo asistanıyım; gerçek stok, randevu veya ödeme onayı veremem.</small>');
+  add('bot', '<p>Merhaba! 👋 Ben <strong>Onur Asistan</strong>. Bütçenize göre araç arayabilir, vites/yakıt tercihinizi sorabilir veya satış süreciyle ilgili sık sorulan sorulara yanıt alabilirsiniz.</p><small class="chat-disclaimer">Kural tabanlı demo asistanıyım; gerçek stok, randevu veya ödeme onayı veremem.</small>');
   displayReplies();
 })();
